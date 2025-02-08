@@ -43,10 +43,8 @@ void pop(){
 
     if(top ==  -1){
 
-        cout << "Uverflow !!! : stack is empty" << endl;
+        cout << "Underflow !!! : stack is empty" << endl;
     } else {
-
-        stack[top];
         top--; // decrease top
     }
 }
@@ -54,12 +52,15 @@ void pop(){
 void peek(){
      
     if(top == -1)
-    cout << "Underflow !!! : stack is full" << endl; 
+    cout << "Underflow !!! : stack is empty" << endl; 
     else
     cout << "The current top element is: " << stack[top] << endl;
 }
 
 void display(){
+
+    if(top == -1)
+    cout << "Stack is empty" << endl;
 
     for(int i = 0; i <= top; i++){
 
